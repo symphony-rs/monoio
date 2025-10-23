@@ -115,3 +115,7 @@ path = "h2_server.rs"
 [[example]]
 name = "h2-client"
 path = "h2_client.rs"
+
+[[example]]
+name = "tcp-polling"
+path = "tcp_polling.rs"

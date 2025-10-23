@@ -184,7 +184,7 @@ impl<D> Runtime<D> {
 
                     // Wait and Process CQ(the error is ignored for not debug mode)
                     #[cfg(not(all(debug_assertions, feature = "debug")))]
-                    let _ = self.driver.park();
+                    let _ = self.driver.park_timeout(std::time::Duration::from_secs(0));
 
                     #[cfg(all(debug_assertions, feature = "debug"))]
                     if let Err(e) = self.driver.park() {
